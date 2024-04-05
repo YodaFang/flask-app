@@ -1,0 +1,4 @@
+flask --app example_app.py --debug run
+
+libs:
+python-dotenv

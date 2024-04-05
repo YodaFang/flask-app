@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='views', static_folder='views/assets')
 
 @app.route('/')
-def hello():
-    return 'Welcome to My Watchlist!'
+def index():
+    return render_template('index.html', name='Yoda', movies=[])
