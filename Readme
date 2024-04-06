@@ -1,4 +1,4 @@
-flask --app example_app.py --debug run
+flask --debug run
 
 libs:
 python-dotenv
