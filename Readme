@@ -1,4 +1,5 @@
 flask --debug run
 
 libs:
-python-dotenv
+install python-dotenv
+install peewee

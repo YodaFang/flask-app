@@ -1,5 +1,5 @@
 var wpWidth =21, wpWidthStr = `${wpWidth}cm`, wpHeight = 29.7, wpHeightStr = `${wpHeight}cm`;
-var xDivStyles = {};
+var xDivStyles = null, xTableStyles = null;
 var pxPerCm = null;
 $(document).ready(function () {
   let wPx = $('#label-page-div').outerWidth();
@@ -12,6 +12,13 @@ document.addEventListener('alpine:init', () => {
     xHeight: wpHeightStr
   })
   xDivStyles = Alpine.store('xDivStyles');
+
+  Alpine.store('xTableStyles', {
+    xWidth: wpWidthStr,
+    xHeight: wpHeightStr,
+    xFontSize: '14px',
+  })
+  xDivStyles = Alpine.store('xTableStyles');
 })
 
 var tabledata = [
